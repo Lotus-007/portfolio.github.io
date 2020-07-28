@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>3D_Porfolio</title>
+		<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	<!-- Popper JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+	<!-- for a Responsive website - add this code -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- I have used few w3 css codes which can be found only in w3schools, so i add their link here -->
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+	<!-- give an external link for social media -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+
+
+	<!---- dropdown --->
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+		<!-- Css code -->
+	<style>
+		body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+		.w3-row-padding img {margin-bottom: 12px}
+		/* Set the width of the sidebar to 120px */
+		.w3-sidebar {width: 120px;background: #141f37;}
+		/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+		#main {margin-left: 120px}
+		/* Remove margins from "page content" on small screens */
+		@media only screen and (max-width: 600px) {#main {margin-left: 0}}
+
+
+
+
+
+
+		/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+		.dropdown-container {
+		  display: none;
+		  background-color: #0b111e;
+		  padding-left: 8px;
+		}
+
+		/* Optional: Style the caret down icon */
+		.fa-caret-down {
+		  float: right;
+		  padding-right: 8px;
+		}
+
+
+	</style>
+
+</head>
+<body class="w3-black" style="background-color: #10182a!important">
+
+
+ 	<!-- NARBAR  -->
+
+	<!-- Icon Bar (Sidebar - hidden on small screens) -->
+	<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+	  <!-- Avatar image in top left corner -->
+	  <img src="photo\togif.gif" alt="SAIava" style="width:100%">
+	  <a href="index.html" class="w3-bar-item w3-button w3-padding-large ">
+	    <i class="fa fa-home w3-xxlarge"></i>
+	    <p>HOME</p>
+	  </a>
+	  <a href="cv.html" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+	    <i class="fa fa-user w3-xxlarge"></i>
+	    <p>ABOUT</p>
+	  </a>
+
+
+
+	  	
+	    <button class="dropdown-btn w3-bar-item w3-button w3-padding-large w3-hover-black"><i class="fa fa-eye w3-xxlarge "></i>PORTFOLIO</button>
+
+		  <div class="dropdown-container">
+		    <a href="2D.html">2D</a><br><br>
+		    <a href="3D.html">3D</a><br><br>
+		  
+		    <a href="Photography.html">Photography</a>
+		  </div>
+		  <br>
+
+	  <a href="contact.html" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+	    <i class="fa fa-envelope w3-xxlarge"></i>
+	    <p>CONTACT</p>
+	  </a>
+	</nav>
+				<!-- javascript for dropdown-->
+
+			<script>
+				/* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+				var dropdown = document.getElementsByClassName("dropdown-btn");
+				var i;
+
+				for (i = 0; i < dropdown.length; i++) {
+				  dropdown[i].addEventListener("click", function() {
+				  this.classList.toggle("active");
+				  var dropdownContent = this.nextElementSibling;
+				  if (dropdownContent.style.display === "block") {
+				  dropdownContent.style.display = "none";
+				  } else {
+				  dropdownContent.style.display = "block";
+				  }
+				  });
+				}
+			</script>	
+
+
+	<!-- Navbar on small screens (Hidden on medium and large screens) -->
+	<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+	  <div class="w3-bar w3-opacity w3-hover-opacity-off w3-center w3-small">
+	    <a href="#" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
+	    <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a>
+	    <a href="#photos" class="w3-bar-item w3-button" style="width:25% !important">PORTFOLIO</a>
+	    <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">CONTACT</a>
+	  </div>
+	</div>
+
+
+
+	<!------------------------------- main content------------------------------->
+
+	<div class="w3-padding-large" id="main">
+	<section>
+		<div class="w3-padding-64 w3-content" id="photos">
+		    <h2 class="w3-text-light-grey">Sutol Project</h2>
+		    <hr style="width:200px" class="w3-opacity">
+		    <br>
+
+		    <!-- Grid for photos -->
+		    <div class="w3-row-padding" style="margin:0 -16px">
+		      <div class="w3-half">
+		      	<img src="photo\boy pose.png" alt="an" style="width:80%; margin-left: 20px">
+		      </div>
+
+		      <div class="w3-half" style="margin-top: 180px">
+		      	<h3>SUTOL</h3>
+		      	<h7>This is the character of my personal project, was made on Blender and Substance Painter software. This is my first perfect character after months of learning 3D software. Sutol is a curly-haired boy with an active outfit, showing a bit of mischief, which is part of my personality. Next, I’ll show you the character’s animation. I’m glad if you like it. </h7>
+		      </div>
+		    </div>
+		    <br>
+
+
+
+		    <div class="w3-justify ">
+		    	<h3 class="w3-padding-16 w3-text-light-grey">Sketch & Model</h3>
+		    	<img src="photo\4boys.png" alt="icon"  width="1000">
+		    		<br>
+		    		<br>
+	    	
+	      		<div class="w3-half">
+	      			<h3 class="w3-padding-16 w3-text-light-grey">Software</h3>
+					<img src="photo\icon2.png" alt="icon2"  width="200">
+				</div>
+				<div class="w3-half">
+					<br>
+	      			<video autoplay muted loop id="myVideo" style="width:70%">
+					  <source src="photo\boy2.mp4" type="video/mp4">
+					</video>						
+				</div>
+				<img src="photo\boy ground.jpg" alt="boy ground" style="width:100%">   
+		    </div>
+		    <br>
+		    <br>
+
+
+		    <div>
+			    <h3>Animation</h3>
+				<p><strong>Tip:</strong> Press the "Esc" key to exit full screen.</p>
+				<br>
+				<video width="100%" controls id="myvideo">
+				  <source src="photo\Sutol.mp4" type="video/mp4" >
+				  <source src="Sotul.ogg" type="video/ogg">
+				  Your browser does not support the video tag.
+				</video>
+
+				<!----CSS--->
+				<script>
+					var elem = document.getElementById("myvideo");
+					function openFullscreen() {
+					  if (elem.requestFullscreen) {
+					    elem.requestFullscreen();
+					  } else if (elem.mozRequestFullScreen) { /* Firefox */
+					    elem.mozRequestFullScreen();
+					  } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+					    elem.webkitRequestFullscreen();
+					  } else if (elem.msRequestFullscreen) { /* IE/Edge */
+					    elem.msRequestFullscreen();
+					  }
+					}
+				</script>		    	
+		    </div>
+
+		</div>
+
+	</section>
+
+	<section>
+		<div class="w3-padding-64 w3-content" id="photos">
+		    <h2 class="w3-text-light-grey">Others model</h2>
+		    <hr style="width:200px" class="w3-opacity">
+		    <br>
+		    
+		<div>
+		    <h3 class="w3-padding-16 w3-text-light-grey">Gaara</h3>
+
+		    <div class="w3-row-padding" style="margin:0 -16px">
+		    	
+		    	
+		    	<div class="w3-half">
+		    	<img src="photo\gaara half.png" alt="gaara half"  style="width:100%">
+		    	</div>
+
+		    	<div class="w3-half" style="margin-top: 90px">	
+		    	<img src="photo\icon3.png" alt="icon2"  width="200">
+		    	<br>	      	
+		      	<h7>Many people know that this is Gaara-the character in the famous anime Naruto. This is the model I made in the beginning of 3d learning. I created him using Maya, Blender <br>and Substance Painter. Gaara is one of my favorite characters because of his cool, mature and responsible image. The power to control sand is also an impression on me. </h7>	    		
+		    	</div>
+		    </div>
+		    <br>
+		    <br>
+
+		    <img src="photo\gaara.jpg" alt="gaara ground"  style="width:100%">
+		    <br>
+		    <br>
+   			<video autoplay muted loop id="myVideo" style="width:100%">
+			  <source src="photo\gaara.mp4" type="video/mp4">
+			</video>		    
+
+		
+		</div>
+		<br>
+		<br>
+		<br>
+		<div>
+		    <h3 class="w3-padding-16 w3-text-light-grey">Gallery</h3>
+
+		    <div class="w3-row-padding" style="margin:0 -16px">
+		    	
+		    	
+			    <!-- Grid for photos -->
+			    <div class="w3-row-padding" style="margin:0 -16px">
+			      <div class="w3-half">
+			        
+			        <img src="photo\character.png" alt="character" style="width:100%">
+			        <img src="photo\room.jpg" alt="room" style="width:100%">			        
+			        
+			      </div>
+
+			      <div class="w3-half">
+			        <img src="photo\f117.jpg" alt="f117" style="width:100%">
+			        <img src="photo\ca noc.png" alt="ca noc" style="width:100%">
+			        <img src="photo\bin2.jpg" alt="bin2" style="width:100%">
+			        <img src="photo\cup82.png" alt="cup82" style="width:100%">
+			        
+			      </div>
+			    <!-- End photo grid -->
+			    </div>
+		    </div>
+		    <br>
+		    <br>			
+
+		</div>    
+			    
+
+
+
+		</div>
+	</section>
+	<section>
+		<!---------------------------------- Footer----------------------------------- -->
+	 	<footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
+
+	    	<a href="https://www.facebook.com/profile.php?id=100004136028113" class="fa fa-facebook"></a>
+	        <a href="https://mail.google.com/mail/u/1/#inbox" class="fa fa-google"></a>
+	        <a href="https://www.youtube.com/watch?v=ioNng23DkIM" class="fa fa-youtube"></a>
+	        <a href="https://www.instagram.com/" class="fa fa-instagram"></a>
+	        <a href="https://www.behance.net/thanhantrng/" class="fa fa-behance"></a>
+
+	    </footer>    
+	<!-- End footer -->		
+	</section>
+
+
+	
+
+	</div>
+
+
+</body>
+</html>

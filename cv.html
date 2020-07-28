@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CV_Porfolio</title>
+		<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	<!-- Popper JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+	<!-- for a Responsive website - add this code -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- I have used few w3 css codes which can be found only in w3schools, so i add their link here -->
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+	<!-- give an external link for social media -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+
+
+	<!---- dropdown --->
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+		<!-- Css code -->
+	<style>
+		body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+		.w3-row-padding img {margin-bottom: 12px}
+		/* Set the width of the sidebar to 120px */
+		.w3-sidebar {width: 120px;background: #141f37;}
+		/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+		#main {margin-left: 120px}
+		/* Remove margins from "page content" on small screens */
+		@media only screen and (max-width: 600px) {#main {margin-left: 0}}
+
+		/* Style the video: 100% width and height to cover the entire window */
+		#myVideo {
+		  position: absolute;
+		  right: 0;
+		  bottom: 0;
+		  min-width: 100%;
+		  min-height: 100%;
+		}
+
+		/* Add some content at the bottom of the video/page */
+		.content {
+		  position: absolute;
+		  bottom: 0;
+		  background: rgba(0, 0, 0, 0);
+		  color: #f1f1f1;
+		  width: 100%;
+		  padding: 20px;
+		  text-align: center;
+		}
+
+
+
+
+		/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+		.dropdown-container {
+		  display: none;
+		  background-color: #0b111e;
+		  padding-left: 8px;
+		}
+
+		/* Optional: Style the caret down icon */
+		.fa-caret-down {
+		  float: right;
+		  padding-right: 8px;
+		}
+
+
+	</style>
+
+</head>
+<body class="w3-black" style="background-color: #10182a!important">
+
+
+ 	<!-- NARBAR  -->
+
+	<!-- Icon Bar (Sidebar - hidden on small screens) -->
+	<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+	  <!-- Avatar image in top left corner -->
+	  <img src="photo\togif.gif" alt="SAIava" style="width:100%">
+	  <a href="index.html" class="w3-bar-item w3-button w3-padding-large ">
+	    <i class="fa fa-home w3-xxlarge"></i>
+	    <p>HOME</p>
+	  </a>
+	  <a href="cv.html" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+	    <i class="fa fa-user w3-xxlarge"></i>
+	    <p>ABOUT</p>
+	  </a>
+
+
+
+	  	
+	    <button class="dropdown-btn w3-bar-item w3-button w3-padding-large w3-hover-black"><i class="fa fa-eye w3-xxlarge "></i>PORTFOLIO</button>
+
+		  <div class="dropdown-container">
+		    <a href="2D.html">2D</a><br><br>
+		    <a href="3D.html">3D</a><br><br>
+		    
+		    <a href="Photography.html">Photography</a>
+		  </div>
+		  <br>
+
+	  <a href="contact.html" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+	    <i class="fa fa-envelope w3-xxlarge"></i>
+	    <p>CONTACT</p>
+	  </a>
+	</nav>
+				<!-- javascript for dropdown-->
+
+			<script>
+				/* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+				var dropdown = document.getElementsByClassName("dropdown-btn");
+				var i;
+
+				for (i = 0; i < dropdown.length; i++) {
+				  dropdown[i].addEventListener("click", function() {
+				  this.classList.toggle("active");
+				  var dropdownContent = this.nextElementSibling;
+				  if (dropdownContent.style.display === "block") {
+				  dropdownContent.style.display = "none";
+				  } else {
+				  dropdownContent.style.display = "block";
+				  }
+				  });
+				}
+			</script>	
+
+
+	<!-- Navbar on small screens (Hidden on medium and large screens) -->
+	<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+	  <div class="w3-bar w3-opacity w3-hover-opacity-off w3-center w3-small">
+	    <a href="#" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
+	    <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a>
+	    <a href="#photos" class="w3-bar-item w3-button" style="width:25% !important">PORTFOLIO</a>
+	    <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">CONTACT</a>
+	  </div>
+	</div>
+
+
+	<!------------------------------------- Page Content ------------------------------------->
+
+	
+	<div class="w3-padding-large" id="main">
+	  <!-- Header/Home -->
+	  <header class="w3-container w3-padding-32 w3-center " id="home">
+	    <section style="
+				    position: relative;
+				    margin-top: 0px;
+				    padding-top: 45%;
+				    overflow: hidden;"> 
+
+
+			<!-- The video -->
+
+
+			<video autoplay muted loop id="myVideo">
+			  <source src="photo\first video.mp4" type="video/mp4">
+			</video>
+
+			<!-- Optional: some overlay text to describe the video -->
+			<div class="content">
+			  <h3 class="text-center pt-5">Hi, I'm Thanh An</h3>
+			  <p>Bringing plants into your home office is the easiest way to bring the space to life, and create a relaxing environment.</p>
+
+			  
+			</div>
+		</section>
+
+
+
+
+	  </header>
+
+
+	<!-- about me Section -->	
+		<section>
+			
+		  <div class="w3-padding-64 w3-content" id="photos">
+		    <h2 class="w3-text-light-grey">About Me</h2>
+		    <hr style="width:200px" class="w3-opacity">
+		    <br>
+
+		    <!-- Grid for photos -->
+		    <div class="w3-row-padding" style="margin:0 -16px">
+		      <div class="w3-half">
+		        	     
+		        <img src="photo\AN 2020.png" alt="an" style="width:100%">
+
+		      </div>
+
+		      <div class="w3-half">
+		      	<h7>Some text about me. Some text about me. I am lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+		     	ex ea commodo consequat. Duis aute irure dolor in reprehenderit in<span id="dots">...</span><span id="more"> voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa 	qui officia deserunt mollit anim id est laborum consectetur
+		      	</span>
+		    	</h7>
+		    	<br>
+		    	<br>
+
+		    		<button onclick="myFunction()" id="myBtn" class="btn default" style="color: #364a72">Read more</button>
+
+
+		    		<!-- css code for readmore button -->
+
+				        <style> 
+				          #more {display: none;}
+
+				        </style>
+
+				    <!-- javascrip code for readmore button -->
+				        
+				        <script>
+				         	function myFunction() {
+							  var dots = document.getElementById("dots");
+							  var moreText = document.getElementById("more");
+							  var btnText = document.getElementById("myBtn");
+
+							  if (dots.style.display === "none") {
+							    dots.style.display = "inline";
+							    btnText.innerHTML = "Read more";
+							    moreText.style.display = "none";
+							  } else {
+							    dots.style.display = "none";
+							    btnText.innerHTML = "Read less";
+							    moreText.style.display = "inline";
+							  }
+							}
+						</script>
+
+		        
+		      </div>
+		    <!-- End grid -->
+		    </div>
+
+		    <div class="w3-justify w3-padding-16">
+		    	<h3 class="w3-padding-16 w3-text-light-grey">My Skills</h3>
+		    	<img src="photo\icon.png" alt="icon"  width="450">
+		    </div>
+
+		    <!-- button-->
+
+			<a href="contact.html" class="w3-button w3-light-grey w3-padding-large w3-section" type="submit"><i class="fa fa-envelope"></i> Contact me</a>
+		
+		  </div>
+
+
+		</section>
+	<!-- about me Section -->	
+
+
+		<!-------------------------------------- Footer------------------------------------------->
+		<footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
+
+		    	<a href="https://www.facebook.com/profile.php?id=100004136028113" class="fa fa-facebook"></a>
+		        <a href="https://mail.google.com/mail/u/1/#inbox" class="fa fa-google"></a>
+		        <a href="https://www.youtube.com/watch?v=ioNng23DkIM" class="fa fa-youtube"></a>
+		        <a href="https://www.instagram.com/" class="fa fa-instagram"></a>
+		        <a href="https://www.behance.net/thanhantrng/" class="fa fa-behance"></a>
+
+		</footer>    
+		<!-- End footer -->
+
+	</div>
+
+
+
+
+	
+
+	
+
+
+</body>
+</html>
